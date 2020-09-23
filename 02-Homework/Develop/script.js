@@ -19,10 +19,16 @@ var ourPassword = "";
 
 function generatePassword() {
   var pwdLength = prompt("Length of password");
+  if(pwdLength<8){
+    alert("Password should be atleast 8 characters");
+  }
+  else{
   var specialChar = confirm("click ok to confirm include special characters");
   var number = confirm("click ok to confirm include numeric characters");
   var lower = confirm("click ok to confirm include lowercase characters");
   var upper = confirm("click ok to confirm include uppercase characters");
+
+
 
 
   for (var i = 0; i < pwdLength;) {
@@ -49,7 +55,7 @@ function generatePassword() {
 return ourPassword;
 }
 
-
+}
 
 
 // Add event listener to generate button
