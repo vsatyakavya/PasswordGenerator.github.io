@@ -11,31 +11,31 @@ function writePassword() {
 }
 var alphabets = "!@#$%^&*()_+~`|}{[]\:;?><,./-="
 var numbers = "0123456789";
-var lower1 = "abcdefghijklmnopqrstuvwxyz";
-var upper1 = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+var lowerAlphabet = "abcdefghijklmnopqrstuvwxyz";
+var upperAlphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 var ourPassword;
 
 
 
 function generatePassword() {
   ourPassword = "";
-  var pwdLength = prompt("Length of password");
+  var pwdLength = prompt("Please select desired length of the password");
 
   if (pwdLength < 8 || pwdLength > 128 ){
-   alert("Password length should be between 8 and 128 and numbers");
+   alert("Password length should be between 8 and 128");
     generatePassword();
   }
  
   if (isNaN(pwdLength)){
-    alert("Please Provide the input as a number");
+    alert("Please Provide the number as an input");
     generatePassword();
  }
 
   else {
-    var specialChar = confirm("click ok to confirm include special characters");
-    var number = confirm("click ok to confirm include numeric characters");
-    var lower = confirm("click ok to confirm include lowercase characters");
-    var upper = confirm("click ok to confirm include uppercase characters");
+    var specialChar = confirm("Click ok to include special characters");
+    var number = confirm("Click ok to include numeric characters");
+    var lower = confirm("Click ok to include lowercase characters");
+    var upper = confirm("Click ok to include uppercase characters");
     if (specialChar == false && number == false && lower == false && upper == false) {
       alert("select atleast one type of character type");
       generatePassword();
@@ -55,11 +55,11 @@ function generatePassword() {
 
       }
       if (i < pwdLength && lower) {
-        ourPassword += lower1.charAt(Math.floor(Math.random() * lower1.length));
+        ourPassword += lowerAlphabet.charAt(Math.floor(Math.random() * lowerAlphabet.length));
         i++;
       }
       if (i < pwdLength && upper) {
-        ourPassword += upper1.charAt(Math.floor(Math.random() * upper1.length));
+        ourPassword += upperAlphabet.charAt(Math.floor(Math.random() * upperAlphabet.length));
         i++;
       }
     }
