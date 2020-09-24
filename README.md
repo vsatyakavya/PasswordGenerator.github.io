@@ -18,7 +18,7 @@
 * Validations
 
 # Sample web page
-![picture]("Homework/passwordGenerator.png")
+![picture](passwordGenerator.png)
 
 # Github Page 
 https://vsatyakavya.github.io/MyPortfolio.github.io/
