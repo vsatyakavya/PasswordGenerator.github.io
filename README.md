@@ -21,11 +21,11 @@
 ![picture](passwordGenerator.png)
 
 # Github Page 
-https://vsatyakavya.github.io/MyPortfolio.github.io/
+https://vsatyakavya.github.io/PasswordGenerator.github.io/
+
 
 
 # Github Repository
-
-https://github.com/vsatyakavya/MyPortfolio.github.io
+https://github.com/vsatyakavya/PasswordGenerator.github.io
 
 copyright 2020
