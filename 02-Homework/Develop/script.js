@@ -13,21 +13,23 @@ var alphabets = "!@#$%^&*()_+~`|}{[]\:;?><,./-="
 var numbers = "0123456789";
 var lower1 = "abcdefghijklmnopqrstuvwxyz";
 var upper1 = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-var ourPassword = "";
+var ourPassword;
 
 
 
 function generatePassword() {
+  ourPassword = "";
   var pwdLength = prompt("Length of password");
 
-  if (pwdLength < 8 || pwdLength > 120 ){
-   alert("Password length should be between 8 and 120 and numbers");
+  if (pwdLength < 8 || pwdLength > 128 ){
+   alert("Password length should be between 8 and 128 and numbers");
     generatePassword();
   }
-  // if(typeof pwdLength !== "number"){
-  //   alert("only numbers")
-  //   generatePassword();
-  // }
+ 
+  if (isNaN(pwdLength)){
+    alert("Please Provide the input as a number");
+    generatePassword();
+ }
 
   else {
     var specialChar = confirm("click ok to confirm include special characters");
@@ -69,4 +71,5 @@ function generatePassword() {
 
 
 // Add event listener to generate button
+
 generateBtn.addEventListener("click", writePassword);
