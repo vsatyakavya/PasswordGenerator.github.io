@@ -1,7 +1,7 @@
-// Assignment Code
+
 var generateBtn = document.querySelector("#generate");
 
-// Write password to the #password input
+
 function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
@@ -9,7 +9,7 @@ function writePassword() {
   passwordText.value = password;
 
 }
-var alphabets = "!@#$%^&*()_+~`|}{[]\:;?><,./-="
+var speChars = "!@#$%^&*()_+~`|}{[]\:;?><,./-="
 var numbers = "0123456789";
 var lowerAlphabet = "abcdefghijklmnopqrstuvwxyz";
 var upperAlphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -21,15 +21,15 @@ function generatePassword() {
   ourPassword = "";
   var pwdLength = prompt("Please select desired length of the password");
 
-  if (pwdLength < 8 || pwdLength > 128 ){
-   alert("Password length should be between 8 and 128");
+  if (pwdLength < 8 || pwdLength > 128) {
+    alert("Password length should be between 8 and 128");
     generatePassword();
   }
- 
-  if (isNaN(pwdLength)){
+
+  else if (isNaN(pwdLength)) {
     alert("Please Provide the number as an input");
     generatePassword();
- }
+  }
 
   else {
     var specialChar = confirm("Click ok to include special characters");
@@ -40,36 +40,28 @@ function generatePassword() {
       alert("select atleast one type of character type");
       generatePassword();
     }
-
-
-
-    for (var i = 0; i < pwdLength;) {
-
+    var i = 0;
+    while (i < pwdLength) {
       if (i < pwdLength && specialChar) {
-        ourPassword += alphabets.charAt(Math.floor(Math.random() * alphabets.length));
-        i++;
+        generatePwd(speChars)
       }
       if (i < pwdLength && number) {
-        ourPassword += numbers.charAt(Math.floor(Math.random() * numbers.length));
-        i++;
-
+        generatePwd(numbers)
       }
       if (i < pwdLength && lower) {
-        ourPassword += lowerAlphabet.charAt(Math.floor(Math.random() * lowerAlphabet.length));
-        i++;
+        generatePwd(lowerAlphabet)
       }
       if (i < pwdLength && upper) {
-        ourPassword += upperAlphabet.charAt(Math.floor(Math.random() * upperAlphabet.length));
+        generatePwd(upperAlphabet)
+      }
+
+      function generatePwd(arr) {
+        ourPassword += arr.charAt(Math.floor(Math.random() * arr.length));
         i++;
+
       }
     }
+    return ourPassword;
   }
-  return ourPassword;
 }
-
-
-
-
-// Add event listener to generate button
-
 generateBtn.addEventListener("click", writePassword);
