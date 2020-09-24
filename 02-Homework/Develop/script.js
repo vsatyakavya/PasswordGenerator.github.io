@@ -19,18 +19,23 @@ var ourPassword = "";
 
 function generatePassword() {
   var pwdLength = prompt("Length of password");
-  if(pwdLength<8){
-    alert("Password should be atleast 8 characters");
+  if(pwdLength < 8 || pwdLength > 120) {
+    alert("Password should be between 8 and 120 characters");
+    generatePassword();
   }
-  else{
+  
+  else {
   var specialChar = confirm("click ok to confirm include special characters");
   var number = confirm("click ok to confirm include numeric characters");
   var lower = confirm("click ok to confirm include lowercase characters");
   var upper = confirm("click ok to confirm include uppercase characters");
+   if(specialChar==false && number==false && lower==false && upper==false){
+    alert("select atleast one type of character type");
+    generatePassword();
+   }
 
 
-
-
+  
   for (var i = 0; i < pwdLength;) {
 
     if (i < pwdLength && specialChar) {
@@ -51,11 +56,11 @@ function generatePassword() {
       i++;
     }
   }
-
+  }
 return ourPassword;
 }
 
-}
+
 
 
 // Add event listener to generate button
