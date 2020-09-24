@@ -28,4 +28,4 @@ https://vsatyakavya.github.io/PasswordGenerator.github.io/
 # Github Repository
 https://github.com/vsatyakavya/PasswordGenerator.github.io
 
-copyright 2020
+@copyright 2020
