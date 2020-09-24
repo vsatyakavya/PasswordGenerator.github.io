@@ -1,4 +1,4 @@
-# PasswordGenerator
+
 # Application Does:
 * Password Generator
 
@@ -19,7 +19,7 @@
 * Validations
 
 # Sample web page
-![picture](contact.png)
+![picture](passwordGenerator.png)
 
 # Github Page 
 https://vsatyakavya.github.io/MyPortfolio.github.io/
