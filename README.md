@@ -18,7 +18,9 @@
 * Validations
 
 # Sample web page
-![picture](passwordGenerator.png)
+![picture](Assets/passwordGenerator.png)
+![picture](Assets/password.png)
+
 
 # Github Page 
 https://vsatyakavya.github.io/PasswordGenerator.github.io/
