@@ -1,6 +1,8 @@
+# Password Generator
 
 # Application Does:
-* Password Generator
+* This application can generate a password which is a combination of numbers, lowerCase, UpperCase and special characters based on the given length from the user.
+
 
 # Technologies used:
 * HTML, CSS, JavaScript
